@@ -1,0 +1,35 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block title %} <title>Account Creation</title> {% endblock %}
+
+{% block content %}
+<div class="loginbox">
+    <img src="{% static 'forum/img/avatar.png' %}" class="avatar" height="65" width="65">
+    <br><br>
+    <h3>Account Creation</h3>
+    <br>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Username to be use:</p>
+        <input type="text" placeholder="" name="username" required> <!--user id get-->
+        <br>
+        <p>Password to be use:</p>
+        <input type="password" name="password" placeholder="" required> <!--password get-->
+        <p>Author name to be seen by others:</p>
+        <input type="text" name="name" placeholder="" required> <!--author name get-->
+        <p>E-mail to be contact by others or lost password:</p>
+        <input type="text" name="email" placeholder="" required> <!--email get-->
+        <br>
+        <br>
+        <br><br>
+        <input type="submit" name="create-id" value="Create Now !!" onclick="submitAction()">  <!--Form submission button-->
+        <br><br>
+        <p>Already have an account? <a href="{% url 'Home' %}">Sign In</a></p>
+
+    </form>
+
+</div>
+{% endblock %}
+

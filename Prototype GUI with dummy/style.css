@@ -1,0 +1,177 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: antiquewhite;
+    font-weight: bold;
+    
+}
+
+a:link {
+    color: rgb(0, 110, 0);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(0, 255, 17);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: rgba(255, 255, 255, 0.692);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    color: rgba(61, 142, 79, 0.281);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+.loginbox{
+    width: 300px;
+    height: 380px;
+    background: transparent;
+    top: 25%;
+    left:60%;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+}
+
+.loginbox input[type="submit"]{
+    border-style: dashed;
+    background-color: bisque;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.loginbox input[type="submit"]:hover{
+    cursor: pointer;
+    background: black;
+    color: antiquewhite;
+
+}
+
+.avatar{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+}
+
+.Framing1{
+    
+    width: 500px;
+    height: 1000px;
+    background: rgba(222, 245, 253, 0.350);
+    top: 25%;
+    left:45%;
+    position: absolute;
+    box-sizing: border-box;
+    box-shadow: 1px white;
+
+}
+
+.Framing1 input[type="submit"]{
+    border-style:double;
+    background-color: bisque;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.Framing1 input[type="submit"]:hover{
+    cursor: pointer;
+    background: black;
+    color: antiquewhite;
+
+}
+
+.textFormatingTitle{
+    color: antiquewhite;
+    font-weight: bolder;
+}
+
+.textFormating1{
+    color: antiquewhite;
+    font-style: italic;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+
+.content{
+    width: 90%;
+    margin: 30px auto 30px;
+    border: 1px dashed white;
+}
+
+.content .main-content{
+    width: 70%;
+    float: right;
+    border: 1px dashed white;
+}
+
+.content .sidebar{
+    width: 20%;
+    float: left;
+    border: 1px dashed white;
+    height: 350px;
+}
+
+.recent{
+    margin: 20px;
+}
+
+.content .post-image{
+    width: 25%;
+    float: left;
+    padding: 15px;
+}
+
+
+.post-preview input[type="submit"]{
+    border-style:double;
+    background-color: bisque;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.post-preview input[type="submit"]:hover{
+    cursor: pointer;
+    background: black;
+    color: antiquewhite;
+
+}
+
+.sidebar input[type="submit"]{
+    border-style:double;
+    background-color: bisque;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sidebar input[type="submit"]:hover{
+    cursor: pointer;
+    background: rgba(247, 190, 190, 0.257);
+    color: antiquewhite;
+
+}

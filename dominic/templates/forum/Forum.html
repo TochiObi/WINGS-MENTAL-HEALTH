@@ -1,0 +1,102 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block title %} <title>Forum Page</title> {% endblock %}
+
+{% block content %}
+ <!-- Login status  -->
+<div style="float: right;" class="">
+    <p class="text-white">{{ request.user }}</p>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">Sign Out</a>
+    {% else%}
+    <a href="{% url 'Home' %}">Sign In</a>
+    {% endif %}
+</div>
+
+
+<div class="content clearfix">
+
+    <div class="sidebar">
+        <br>
+        To Main Page<br>
+        <!--the link page to change page type-->
+        <a href="{% url 'description' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+        Depression<br>
+        <a href="{% url 'forum' 'depression' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+        Substance Use<br>
+        <a href="{% url 'forum' 'substance_use' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+        Schizophreria<br>
+        <a href="{% url 'forum' 'schizophreria' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+        Bipolar<br>
+        <a href="{% url 'forum' 'bipolar' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+        Others<br>
+        <a href="{% url 'forum' 'others' %}"><input type="submit" name="go" value="Go to"></a><br>
+        <br>
+
+
+    </div>
+
+
+    <div class="main-content">
+        <h1 class="recent">Recent Post on {{ category }}: </h1>
+        <!--page category here-->
+
+        <div class="post">
+            <!--
+                POST updates inside this <div></div> section
+                sample post with the name of # from same file dir
+            -->
+            {% if latest_article %}
+            <img src="{% static 'forum/img/mailme.jpg' %}" alt="" class="post-image">
+            <!--post image of article-->
+            <div class="post-preview">
+                <h1><a href="#">{{ latest_article.title }}</a></h1>
+                <!--Article name and html-->
+                <i class="fa fa-user">&nbsp;{{ latest_article.author }}</i>:&nbsp;&nbsp;&nbsp;
+                <!--Author name-->
+                <i class="fa fa-calendar" aria-hidden="true"> {{ latest_article.dateadded }}</i>
+                <!--Calender format-->
+
+                <p class="prev-text text-white">
+                    <!--Sample text within <p> class-->
+                        {{ latest_article.text }}<br>
+                   
+
+                </p>
+                <a href="#"><input type="submit" name="more" value="Read More.."></a>
+                <!--html to original full post-->
+
+            </div><br><br>
+            <!--
+                POST updates end here
+            -->
+            {% else %}
+
+            <p>No recent post</p>
+
+            {% endif %}
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="{% static 'forum/js/script.js' %}"></script>
+{% endblock %}

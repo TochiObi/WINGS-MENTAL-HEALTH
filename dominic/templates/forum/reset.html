@@ -1,0 +1,36 @@
+{% extends './base.html' %}
+{% load static %}
+
+
+{% block title %} <title>Password Reset</title> {% endblock %}
+
+{% block content %}
+<div class="loginbox">
+    <img src="{% static 'forum/img/lock.png' %}" class="avatar" height="65" width="65">
+    <br><br>
+    <h3>Password Retrieval</h3>
+    <br><br>
+    <form method="POST">
+        {% csrf_token %}
+        
+        <p>Your registered email address for password retrieval:</p>
+        <input type="email" name="email" placeholder="">
+        <br>
+        <br>
+        <br><br>
+        <input type="submit" name="reset" value="Retrieve password via E-mail"> <!--Password reset button-->
+        <br><br>
+        
+        
+
+
+    </form>
+
+
+
+
+
+</div>
+{% endblock %}
+
+

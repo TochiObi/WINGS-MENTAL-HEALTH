@@ -1,0 +1,6 @@
+-MainPage as first to launch.
+
+-everything else to know in webpage are displayed at bottom of code.
+or comment within each section.
+
+-i have did some prescaling so the backend just have to do database, process and display according to preset format.
